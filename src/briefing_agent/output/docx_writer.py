@@ -26,7 +26,7 @@ def write_docx(
     doc.add_paragraph(f"Generated: {now_utc.isoformat()} UTC")
 
     doc.add_heading("Summary", level=2)
-    doc.add_paragraph(summary)
+    _write_structured_summary(doc, summary)
     if mix_counts:
         doc.add_paragraph(
             f"Source mix - RSS: {mix_counts.get('rss', 0)}, "
@@ -51,4 +51,16 @@ def write_docx(
 
     doc.save(file_path)
     return file_path
+
+
+def _write_structured_summary(doc: Document, summary: str) -> None:
+    for raw_line in summary.splitlines():
+        line = raw_line.strip()
+        if not line:
+            doc.add_paragraph("")
+            continue
+        if line.startswith("- "):
+            doc.add_paragraph(line[2:], style="List Bullet")
+            continue
+        doc.add_paragraph(line)
 
