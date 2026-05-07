@@ -1,0 +1,28 @@
+[project]
+name = "langgraph-weekly-briefing-agent"
+version = "0.1.0"
+description = "Client-specific weekly media and economic data briefing agent"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "langgraph",
+  "langchain-community",
+  "openai",
+  "httpx",
+  "feedparser",
+  "python-docx",
+  "pyyaml",
+  "typer",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest",
+]
+
+[project.scripts]
+briefing-agent = "briefing_agent.main:app"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

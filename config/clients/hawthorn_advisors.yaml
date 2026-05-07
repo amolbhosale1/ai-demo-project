@@ -1,0 +1,89 @@
+client_name: Hawthorn Advisors
+
+llm:
+  provider: openrouter
+  model: deepseek/deepseek-chat-v3-0324:free
+  fallback_models:
+    - meta-llama/llama-3.3-8b-instruct:free
+    - mistralai/mistral-small-3.2-24b-instruct:free
+
+industry:
+  name: general
+  keywords:
+    - communications
+    - corporate communications
+    - public affairs
+    - reputation management
+    - crisis communications
+    - litigation
+    - financial communications
+    - investor relations
+    - policy
+    - regulation
+
+sources:
+  providers:
+    - provider: rss_feed_loader
+      kind: rss
+      config:
+        max_items_per_feed: 8
+        feeds:
+          - name: Reuters Business
+            url: https://feeds.reuters.com/reuters/businessNews
+          - name: BBC Business
+            url: https://feeds.bbci.co.uk/news/business/rss.xml
+          - name: Financial Times Companies
+            url: https://www.ft.com/companies?format=rss
+          - name: Politico Europe
+            url: https://www.politico.eu/feed/
+          - name: AP Top News
+            url: https://feeds.apnews.com/apf-topnews
+
+    - provider: world_bank
+      kind: api
+      config:
+        max_points: 4
+        indicators:
+          - code: NY.GDP.MKTP.CD
+            title: Global GDP (current US$)
+          - code: FP.CPI.TOTL.ZG
+            title: Inflation, consumer prices (annual %)
+          - code: FR.INR.RINR
+            title: Real interest rate (%)
+          - code: SL.UEM.TOTL.ZS
+            title: Unemployment, total (%)
+
+    - provider: hn_algolia
+      kind: other
+      config:
+        per_keyword: 2
+        keywords:
+          - public affairs
+          - policy regulation
+          - corporate reputation
+          - crisis management
+          - investor relations
+
+    # Optional MCP bridge provider (if you run a free MCP->HTTP gateway).
+    # - provider: mcp_gateway
+    #   kind: other
+    #   config:
+    #     gateway_url: https://your-mcp-gateway.example.com/news
+    #     items_path: items
+    #     title_key: title
+    #     url_key: url
+    #     summary_key: summary
+    #     source_name: MCP News Gateway
+    #     source_type: other
+    #     category: article
+    #     max_items: 10
+
+selection:
+  target_items: 12
+  minimum_share:
+    rss: 0.25
+    api: 0.25
+    other: 0.25
+
+output:
+  dir: outputs

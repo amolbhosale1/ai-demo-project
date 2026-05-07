@@ -1,0 +1,51 @@
+industries:
+  general:
+    keywords: ["economy", "technology", "markets", "policy"]
+    rss_feeds:
+      - name: Reuters World News
+        url: https://feeds.reuters.com/reuters/worldNews
+      - name: BBC Business
+        url: https://feeds.bbci.co.uk/news/business/rss.xml
+      - name: AP Top News
+        url: https://feeds.apnews.com/apf-topnews
+    economic_indicators:
+      - code: NY.GDP.MKTP.CD
+        title: Global GDP (current US$)
+      - code: FP.CPI.TOTL.ZG
+        title: Inflation, consumer prices (annual %)
+      - code: SL.UEM.TOTL.ZS
+        title: Unemployment, total (%)
+
+  accounting:
+    keywords: ["accounting", "audit", "tax", "IFRS", "GAAP", "compliance"]
+    rss_feeds:
+      - name: Accounting Today
+        url: https://www.accountingtoday.com/section/breaking-news/rss
+      - name: IRS Newsroom
+        url: https://www.irs.gov/newsroom/rss
+      - name: Financial Times Companies
+        url: https://www.ft.com/companies?format=rss
+    economic_indicators:
+      - code: GC.TAX.TOTL.GD.ZS
+        title: Tax revenue (% of GDP)
+      - code: NV.IND.TOTL.ZS
+        title: Industry value added (% of GDP)
+      - code: NE.CON.GOVT.ZS
+        title: Government expenditure (% of GDP)
+
+  coding:
+    keywords: ["software", "programming", "AI", "open source", "cloud", "developer"]
+    rss_feeds:
+      - name: Hacker News Frontpage
+        url: https://hnrss.org/frontpage
+      - name: GitHub Blog
+        url: https://github.blog/feed/
+      - name: InfoQ
+        url: https://www.infoq.com/feed/
+    economic_indicators:
+      - code: BX.KLT.DINV.CD.WD
+        title: Foreign direct investment (net inflows)
+      - code: IT.NET.USER.ZS
+        title: Individuals using the Internet (%)
+      - code: GB.XPD.RSDV.GD.ZS
+        title: R&D expenditure (% of GDP)

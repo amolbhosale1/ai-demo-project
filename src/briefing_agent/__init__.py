@@ -1,0 +1,2 @@
+"""Weekly briefing agent package."""
+
