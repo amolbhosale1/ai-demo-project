@@ -49,8 +49,9 @@ def _collect_node(state: AgentState) -> AgentState:
 
 def _rank_node(state: AgentState) -> AgentState:
     cfg = state["client_config"]
-    keywords = cfg.get("industry", {}).get("keywords", [])
-    ranked = rank_and_deduplicate(state["raw_items"], keywords)
+    keywords = _build_relevance_keywords(cfg)
+    min_keyword_hits = int(cfg.get("selection", {}).get("relevance", {}).get("min_keyword_hits", 1))
+    ranked = rank_and_deduplicate(state["raw_items"], keywords, min_keyword_hits=min_keyword_hits)
     target_count = int(cfg.get("selection", {}).get("target_items", 12))
     minimum_share = cfg.get("selection", {}).get("minimum_share", {})
     state["ranked_items"] = ranked
@@ -74,7 +75,11 @@ def _summarize_node(state: AgentState) -> AgentState:
         model=llm_cfg["model"],
         fallback_models=llm_cfg.get("fallback_models", []),
     )
-    state["briefing_summary"] = client.summarize(cfg.get("client_name", "Client"), state["approved_items"])
+    state["briefing_summary"] = client.summarize(
+        cfg.get("client_name", "Client"),
+        state["approved_items"],
+        client_context=cfg.get("firm_profile", {}),
+    )
     return state
 
 
@@ -89,4 +94,27 @@ def _output_node(state: AgentState) -> AgentState:
     )
     state["output_path"] = str(path)
     return state
+
+
+def _build_relevance_keywords(cfg: dict) -> list[str]:
+    industry_keywords = cfg.get("industry", {}).get("keywords", [])
+    profile = cfg.get("firm_profile", {})
+    profile_keywords = [
+        *profile.get("services", []),
+        *profile.get("target_sectors", []),
+        *profile.get("priority_topics", []),
+        *profile.get("geo_focus", []),
+    ]
+    merged: list[str] = []
+    seen: set[str] = set()
+    for kw in [*industry_keywords, *profile_keywords]:
+        item = str(kw).strip()
+        if not item:
+            continue
+        key = item.lower()
+        if key in seen:
+            continue
+        seen.add(key)
+        merged.append(item)
+    return merged
 

@@ -1,0 +1,142 @@
+client_name: Think Macro Technologies
+
+firm_profile:
+  website: https://thinkmacrotechnologies.in/
+  type: Web agency and SaaS/MVP product engineering partner
+  founder: Amol Bhosale
+  offices:
+    - Nashik, India
+    - Montrouge, France
+  services:
+    - MVP development
+    - SaaS platform development
+    - Web application development
+    - AI agent development
+    - Cloud and DevOps
+    - Legacy migration and bug fixing
+    - UI/UX and product design
+  target_sectors:
+    - B2B SaaS
+    - Healthcare software
+    - Sustainability and carbon tech
+    - Accounting and ERP software
+    - AI automation and voice AI
+    - Founder-led startups
+  priority_topics:
+    - MVP launch strategy
+    - SaaS architecture and scalability
+    - React and Next.js ecosystem
+    - Node.js backend patterns
+    - AWS and cloud cost optimization
+    - DevOps and CI/CD
+    - AI agents and workflow automation
+    - GDPR/HIPAA/SOC compliance
+    - product delivery and execution risk
+    - startup funding and founder operations
+  geo_focus:
+    - UK
+    - Europe
+    - Germany
+    - US
+    - India
+
+llm:
+  provider: openrouter
+  model: deepseek/deepseek-chat-v3-0324:free
+  fallback_models:
+    - meta-llama/llama-3.3-8b-instruct:free
+    - mistralai/mistral-small-3.2-24b-instruct:free
+
+industry:
+  name: coding
+  keywords:
+    - mvp development
+    - saas development
+    - product engineering
+    - founder led startup
+    - startup execution
+    - software architecture
+    - react
+    - next.js
+    - node.js
+    - typescript
+    - ai agents
+    - cloud devops
+    - aws
+    - kubernetes
+    - terraform
+    - gdpr
+    - hipaa
+    - soc 2
+
+sources:
+  providers:
+    - provider: rss_feed_loader
+      kind: rss
+      config:
+        max_items_per_feed: 8
+        feeds:
+          - name: TechCrunch Startups
+            url: https://techcrunch.com/category/startups/feed/
+          - name: The Pragmatic Engineer
+            url: https://newsletter.pragmaticengineer.com/feed
+          - name: InfoQ
+            url: https://www.infoq.com/feed/
+          - name: AWS News Blog
+            url: https://aws.amazon.com/blogs/aws/feed/
+          - name: Google Cloud Blog
+            url: https://cloudblog.withgoogle.com/rss/
+          - name: GitHub Blog
+            url: https://github.blog/feed/
+
+    - provider: world_bank
+      kind: api
+      config:
+        max_points: 4
+        indicators:
+          - code: NY.GDP.MKTP.CD
+            title: Global GDP (current US$)
+          - code: FP.CPI.TOTL.ZG
+            title: Inflation, consumer prices (annual %)
+          - code: FR.INR.RINR
+            title: Real interest rate (%)
+          - code: BX.KLT.DINV.CD.WD
+            title: Foreign direct investment, net inflows
+
+    - provider: hn_algolia
+      kind: other
+      config:
+        per_keyword: 3
+        keywords:
+          - saas mvp
+          - startup architecture
+          - ai agent workflow
+          - devops automation
+          - gdpr compliance software
+          - healthcare erp
+
+    # Optional MCP bridge provider (if you run your own free MCP->HTTP gateway).
+    # - provider: mcp_gateway
+    #   kind: other
+    #   config:
+    #     gateway_url: https://your-mcp-gateway.example.com/tech-news
+    #     items_path: items
+    #     title_key: title
+    #     url_key: url
+    #     summary_key: summary
+    #     source_name: MCP Tech Gateway
+    #     source_type: other
+    #     category: article
+    #     max_items: 12
+
+selection:
+  target_items: 12
+  relevance:
+    min_keyword_hits: 1
+  minimum_share:
+    rss: 0.25
+    api: 0.25
+    other: 0.25
+
+output:
+  dir: outputs

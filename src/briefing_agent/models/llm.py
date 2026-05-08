@@ -46,12 +46,12 @@ class LLMClient:
         else:
             raise ValueError(f"Unsupported provider: {provider}")
 
-    def summarize(self, client_name: str, items: list[BriefingItem]) -> str:
+    def summarize(self, client_name: str, items: list[BriefingItem], client_context: dict | None = None) -> str:
         if not items:
             return "No approved items available for this period."
-        prompt = self._build_structured_prompt(client_name, items)
+        prompt = self._build_structured_prompt(client_name, items, client_context or {})
         if self.client is None:
-            return self._fallback_summary(client_name, items)
+            return self._fallback_summary(client_name, items, client_context or {})
         models_to_try = [self.model, *self.fallback_models]
         for model_name in models_to_try:
             try:
@@ -66,11 +66,13 @@ class LLMClient:
                 return completion.choices[0].message.content or ""
             except Exception:
                 continue
-        return self._fallback_summary(client_name, items)
+        return self._fallback_summary(client_name, items, client_context or {})
 
-    def _fallback_summary(self, client_name: str, items: list[BriefingItem]) -> str:
+    def _fallback_summary(self, client_name: str, items: list[BriefingItem], client_context: dict) -> str:
         articles = [i for i in items if i.category == "article"][:8]
         data_points = [i for i in items if i.category == "data_point"][:6]
+        services = ", ".join(client_context.get("services", [])[:6]) or "strategic communications and advisory services"
+        sectors = ", ".join(client_context.get("target_sectors", [])[:6]) or "corporate, policy, and financial services"
         top_titles = [a.title for a in articles[:3]]
         top_news = "\n".join([f"- {title}" for title in top_titles]) if top_titles else "- No major headlines identified"
         major_developments = "\n".join(
@@ -86,7 +88,7 @@ class LLMClient:
         )
         return (
             f"HEADLINE: Weekly Intelligence Brief - {client_name}\n"
-            f"SUBHEADING: Key developments across media, policy, markets, and reputation landscape this week.\n\n"
+            f"SUBHEADING: Key developments for {services} across {sectors} this week.\n\n"
             f"MAIN NEWS:\n{top_news}\n\n"
             f"MAJOR DEVELOPMENTS:\n{major_developments}\n\n"
             f"ECONOMIC SNAPSHOT:\n{economic_snapshot}\n\n"
@@ -94,10 +96,18 @@ class LLMClient:
             "NOTES:\n- AI model summary unavailable; structured fallback summary used."
         )
 
-    def _build_structured_prompt(self, client_name: str, items: list[BriefingItem]) -> str:
+    def _build_structured_prompt(self, client_name: str, items: list[BriefingItem], client_context: dict) -> str:
         bullet_lines = [f"- [{it.source_type}] {it.title}: {it.summary[:220]}" for it in items[:25]]
+        services = ", ".join(client_context.get("services", [])[:10])
+        sectors = ", ".join(client_context.get("target_sectors", [])[:10])
+        priorities = ", ".join(client_context.get("priority_topics", [])[:12])
         return (
             f"Create a comprehensive weekly intelligence briefing for {client_name}.\n"
+            "Firm context:\n"
+            f"- Services: {services or 'n/a'}\n"
+            f"- Target sectors: {sectors or 'n/a'}\n"
+            f"- Priority topics: {priorities or 'n/a'}\n"
+            "Use this context to prioritize ONLY relevant intelligence for this firm.\n\n"
             "Use exactly this output format with section labels and bullet points:\n"
             "HEADLINE: <single line>\n"
             "SUBHEADING: <single line>\n\n"

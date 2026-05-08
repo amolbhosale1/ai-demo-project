@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from collections.abc import Callable
 from typing import Any
 
@@ -15,17 +16,35 @@ ProviderFn = Callable[[dict[str, Any]], list[BriefingItem]]
 
 def collect_from_providers(provider_specs: list[dict[str, Any]]) -> list[BriefingItem]:
     items: list[BriefingItem] = []
-    for spec in provider_specs:
-        provider_name = spec.get("provider", "")
-        config = spec.get("config", {})
-        fn = _PROVIDER_REGISTRY.get(provider_name)
-        if fn is None:
-            continue
-        try:
-            items.extend(fn(config))
-        except Exception:
-            continue
+    total = len(provider_specs)
+    max_workers = max(1, min(8, total))
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [
+            executor.submit(_run_provider, idx, total, spec)
+            for idx, spec in enumerate(provider_specs, start=1)
+        ]
+        for future in as_completed(futures):
+            items.extend(future.result())
+    print(f"[SOURCE] Completed provider pass: {len(items)} total items from {total} providers")
     return items
+
+
+def _run_provider(idx: int, total: int, spec: dict[str, Any]) -> list[BriefingItem]:
+    provider_name = spec.get("provider", "")
+    config = spec.get("config", {})
+    kind = spec.get("kind", "unknown")
+    print(f"[SOURCE {idx}/{total}] Running provider '{provider_name}' (kind={kind})")
+    fn = _PROVIDER_REGISTRY.get(provider_name)
+    if fn is None:
+        print(f"[SOURCE {idx}/{total}] Unknown provider '{provider_name}', skipping")
+        return []
+    try:
+        provider_items = fn(config)
+        print(f"[SOURCE {idx}/{total}] Provider '{provider_name}' collected {len(provider_items)} items")
+        return provider_items
+    except Exception as exc:
+        print(f"[SOURCE {idx}/{total}] Provider '{provider_name}' failed: {exc}")
+        return []
 
 
 def _collect_rss(config: dict[str, Any]) -> list[BriefingItem]:

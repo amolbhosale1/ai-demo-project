@@ -1,5 +1,44 @@
 client_name: Hawthorn Advisors
 
+firm_profile:
+  website: https://www.hawthornadvisors.com
+  type: Independent communications consultancy
+  offices:
+    - London
+    - Abu Dhabi
+    - New York
+  services:
+    - Corporate communications
+    - Financial communications
+    - Public affairs
+    - Crisis and issues
+    - Litigation and disputes
+    - Reputation management
+    - Campaigns
+    - Behavioural sciences
+    - Sustainability
+  target_sectors:
+    - Financial services
+    - Technology
+    - Public policy and regulation
+    - Corporate and investor communications
+    - ESG and sustainability
+    - High-stakes reputation and disputes
+  priority_topics:
+    - regulatory change
+    - policy and public affairs
+    - geopolitical risk
+    - capital markets and investor sentiment
+    - crisis and reputational risk
+    - litigation and legal exposure
+    - executive and leadership reputation
+    - sustainability and ESG communications
+  geo_focus:
+    - UK
+    - Europe
+    - Middle East
+    - US
+
 llm:
   provider: openrouter
   model: deepseek/deepseek-chat-v3-0324:free
@@ -80,6 +119,8 @@ sources:
 
 selection:
   target_items: 12
+  relevance:
+    min_keyword_hits: 1
   minimum_share:
     rss: 0.25
     api: 0.25

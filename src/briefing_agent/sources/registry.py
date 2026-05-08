@@ -6,7 +6,11 @@ from typing import Iterable
 from briefing_agent.types import BriefingItem
 
 
-def rank_and_deduplicate(items: Iterable[BriefingItem], keywords: list[str]) -> list[BriefingItem]:
+def rank_and_deduplicate(
+    items: Iterable[BriefingItem],
+    keywords: list[str],
+    min_keyword_hits: int = 0,
+) -> list[BriefingItem]:
     seen: set[str] = set()
     ranked: list[BriefingItem] = []
     lowered = [k.lower() for k in keywords]
@@ -16,7 +20,10 @@ def rank_and_deduplicate(items: Iterable[BriefingItem], keywords: list[str]) -> 
             continue
         seen.add(key)
         text = f"{item.title} {item.summary}".lower()
-        score = 1.0 + sum(1 for kw in lowered if kw and kw in text)
+        keyword_hits = sum(1 for kw in lowered if kw and kw in text)
+        if lowered and item.category == "article" and keyword_hits < min_keyword_hits:
+            continue
+        score = 1.0 + keyword_hits
         if item.category == "data_point":
             score += 0.5
         item.score = score
