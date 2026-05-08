@@ -29,3 +29,5 @@ htmlcov/
 
 # Local outputs
 outputs/
+README.md
+STEPS.md
