@@ -6,6 +6,7 @@ import typer
 
 from briefing_agent.config import ensure_source_providers, load_yaml, merge_industry_preset
 from briefing_agent.graph import build_graph
+from competitor_alternatives_agent.graph import build_competitor_alternatives_graph
 from stakeholder_mapper_agent.graph import build_stakeholder_mapper_graph
 
 app = typer.Typer(help="LangGraph Weekly Briefing Agent")
@@ -52,6 +53,27 @@ def stakeholder_map(client_config: str = typer.Option(..., help="Path to client 
     typer.echo(f"Stakeholder map generated: {result['output_path']}")
     if result.get("markdown_output_path"):
         typer.echo(f"Stakeholder map markdown generated: {result['markdown_output_path']}")
+
+
+@app.command("competitor-alternatives")
+def competitor_alternatives(client_config: str = typer.Option(..., help="Path to client YAML config")):
+    cfg_path = Path(client_config)
+    cfg = load_yaml(cfg_path)
+    graph = build_competitor_alternatives_graph()
+    initial_state = {
+        "client_config": cfg,
+        "client_snapshot": None,
+        "local_candidates": [],
+        "similar_candidates": [],
+        "adjacent_candidates": [],
+        "local_competitors": [],
+        "similar_competitors": [],
+        "adjacent_competitors": [],
+        "priority_actions": [],
+        "output_path": "",
+    }
+    result = graph.invoke(initial_state)
+    typer.echo(f"Competitor alternatives report generated: {result['output_path']}")
 
 
 @app.command()

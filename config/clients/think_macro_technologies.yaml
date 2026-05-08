@@ -57,6 +57,14 @@ stakeholder_mapper_agent:
   output:
     dir: outputs
 
+competitor_alternatives_agent:
+  max_results_per_query: 5
+  enable_playwright: false
+  directory_mode: true
+  parallel_fetch: true
+  output:
+    dir: outputs
+
 llm:
   provider: openrouter
   model: deepseek/deepseek-chat-v3-0324:free
