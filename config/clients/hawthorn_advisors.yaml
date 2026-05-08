@@ -39,6 +39,22 @@ firm_profile:
     - Middle East
     - US
 
+stakeholder_mapper_agent:
+  country: United Kingdom
+  country_system: uk_parliamentary
+  geography:
+    scope: state
+    target_regions:
+      - London
+  policy_areas:
+    - public affairs
+    - regulation
+    - litigation and disputes
+    - financial communications
+    - sustainability policy
+  output:
+    dir: outputs
+
 llm:
   provider: openrouter
   model: deepseek/deepseek-chat-v3-0324:free

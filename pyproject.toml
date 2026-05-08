@@ -13,6 +13,7 @@ dependencies = [
   "httpx",
   "feedparser",
   "python-docx",
+  "openpyxl",
   "pyyaml",
   "typer",
 ]

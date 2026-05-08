@@ -40,6 +40,23 @@ firm_profile:
     - US
     - India
 
+stakeholder_mapper_agent:
+  country: India
+  country_system: india_parliamentary
+  geography:
+    scope: state
+    target_regions:
+      - Maharashtra
+      - Gujarat
+  policy_areas:
+    - digital public infrastructure
+    - startup policy
+    - data protection and privacy
+    - AI governance
+    - cloud and digital economy regulation
+  output:
+    dir: outputs
+
 llm:
   provider: openrouter
   model: deepseek/deepseek-chat-v3-0324:free
