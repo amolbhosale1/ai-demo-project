@@ -65,16 +65,13 @@ def test_markdown_report_sections(tmp_path):
     assert "## Priority Actions (Next 30 Days)" in text
 
 
-def test_discovery_uses_web_results(monkeypatch):
+def test_discovery_uses_mcp_results(monkeypatch):
     client = build_client_snapshot(_client_cfg())
 
-    def _mock_web_search(query: str, max_results: int) -> list[str]:
+    def _mock_mcp_links(queries: list[str], max_results_per_query: int, min_links: int = 6) -> list[str]:
         return ["https://sample-one.com", "https://sample-two.com"]
 
-    def _mock_news(query: str, max_results: int) -> list[str]:
-        return ["https://sample-three.com"]
-
-    def _mock_extract(url: str, bucket: str, client, enable_playwright: bool):
+    def _mock_extract(url: str, bucket: str, client):
         return Competitor(
             name=url.replace("https://", "").split(".")[0].title(),
             website=url,
@@ -87,11 +84,13 @@ def test_discovery_uses_web_results(monkeypatch):
             source_bucket=bucket,
         )
 
-    monkeypatch.setattr(discovery, "_web_search", _mock_web_search)
-    monkeypatch.setattr(discovery, "_google_news_rss_links", _mock_news)
+    monkeypatch.setattr(discovery, "_mcp_discover_links", _mock_mcp_links)
     monkeypatch.setattr(discovery, "_extract_company_profile", _mock_extract)
 
-    results = discovery.discover_similar_competitors(client, config={})
+    results = discovery.discover_similar_competitors(
+        client,
+        config={},
+    )
     assert results
     assert any(item.website == "https://sample-one.com" for item in results)
 
@@ -99,12 +98,12 @@ def test_discovery_uses_web_results(monkeypatch):
 def test_directory_mode_parallel_path(monkeypatch):
     client = build_client_snapshot(_client_cfg())
 
-    def _mock_parallel(queries: list[str], max_results_per_query: int) -> list[str]:
+    def _mock_mcp_links(queries: list[str], max_results_per_query: int, min_links: int = 6) -> list[str]:
         assert any("site:clutch.co" in q for q in queries)
         assert any("site:g2.com" in q for q in queries)
         return ["https://dir-one.com", "https://dir-two.com"]
 
-    def _mock_extract(url: str, bucket: str, client, enable_playwright: bool):
+    def _mock_extract(url: str, bucket: str, client):
         return Competitor(
             name="Dir",
             website=url,
@@ -117,11 +116,39 @@ def test_directory_mode_parallel_path(monkeypatch):
             source_bucket=bucket,
         )
 
-    monkeypatch.setattr(discovery, "_discover_parallel_links", _mock_parallel)
+    monkeypatch.setattr(discovery, "_mcp_discover_links", _mock_mcp_links)
     monkeypatch.setattr(discovery, "_extract_company_profile", _mock_extract)
     results = discovery.discover_local_competitors(
         client,
-        config={"directory_mode": True, "parallel_fetch": True, "max_results_per_query": 3},
+        config={"max_results_per_query": 3},
     )
     assert len(results) == 2
+
+
+def test_mcp_backend_discovery(monkeypatch):
+    client = build_client_snapshot(_client_cfg())
+
+    def _mock_mcp_links(queries: list[str], max_results_per_query: int, min_links: int = 6) -> list[str]:
+        return ["https://mcp-one.com", "https://mcp-two.com"]
+
+    def _mock_extract(url: str, bucket: str, client):
+        return Competitor(
+            name="Mcp",
+            website=url,
+            category=bucket,
+            geo="UK",
+            services=["web application development"],
+            target_sectors=["b2b saas"],
+            differentiators=["mcp"],
+            evidence_urls=[url],
+            source_bucket=bucket,
+        )
+
+    monkeypatch.setattr(discovery, "_mcp_discover_links", _mock_mcp_links)
+    monkeypatch.setattr(discovery, "_extract_company_profile", _mock_extract)
+    out = discovery.discover_similar_competitors(
+        client,
+        config={},
+    )
+    assert len(out) == 2
 

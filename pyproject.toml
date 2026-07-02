@@ -7,6 +7,7 @@ requires-python = ">=3.10"
 dependencies = [
   "langgraph",
   "langchain-community",
+  "langchain-mcp-adapters",
   "newspaper3k",
   "lxml_html_clean",
   "openai",

@@ -1,0 +1,24 @@
+{
+  "tools": [],
+  "mcp_servers": {
+    "ddg-search": {
+      "command": "uvx",
+      "args": ["duckduckgo-mcp-server"],
+      "transport": "stdio"
+    },
+    "linkedin": {
+      "command": "uvx",
+      "args": [
+        "linkedin-scraper-mcp@latest",
+        "--chrome-path",
+        "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge",
+        "--user-data-dir",
+        "/Users/amol/Library/Application Support/Microsoft Edge/Default"
+      ],
+      "env": {
+        "UV_HTTP_TIMEOUT": "300"
+      },
+      "transport": "stdio"
+    }
+  }
+}

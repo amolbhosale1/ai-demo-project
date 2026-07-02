@@ -31,3 +31,5 @@ htmlcov/
 outputs/
 README.md
 STEPS.md
+
+config/clients/*

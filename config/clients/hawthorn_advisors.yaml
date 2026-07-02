@@ -57,9 +57,6 @@ stakeholder_mapper_agent:
 
 competitor_alternatives_agent:
   max_results_per_query: 5
-  enable_playwright: false
-  directory_mode: true
-  parallel_fetch: true
   output:
     dir: outputs
 
