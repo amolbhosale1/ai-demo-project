@@ -1,0 +1,28 @@
+department_id,department,category
+1,Engineering,Tech
+2,Data Science,Tech
+3,Data Engineering,Tech
+4,ML Engineering,Tech
+5,Platform,Tech
+6,Security,Tech
+7,IT & Helpdesk,Tech
+8,QA & Testing,Tech
+9,Product Management,Product
+10,Product Operations,Product
+11,Design,Product
+12,UX Research,Product
+13,Sales,GTM
+14,Sales Operations,GTM
+15,Marketing,GTM
+16,Content Marketing,GTM
+17,Customer Success,GTM
+18,Customer Support,GTM
+19,Human Resources,G&A
+20,Recruiting,G&A
+21,Finance,G&A
+22,Accounting,G&A
+23,Legal,G&A
+24,Administration,G&A
+25,Operations,Ops
+26,Procurement,Ops
+27,Facilities,Ops

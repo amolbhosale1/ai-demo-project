@@ -21,6 +21,7 @@ htmlcov/
 # Environment and local config
 .env
 .env.*
+!.env.example
 
 # Editor/OS artifacts
 .DS_Store
@@ -29,7 +30,8 @@ htmlcov/
 
 # Local outputs
 outputs/
-README.md
+logs/
+# README.md
 STEPS.md
 
 config/clients/*

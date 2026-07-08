@@ -1,0 +1,22 @@
+location_id,country,city,cost_index
+1,United States,San Francisco,1.35
+2,United States,New York,1.3
+3,United States,Austin,1.05
+4,Canada,Toronto,1.1
+5,United Kingdom,London,1.25
+6,Germany,Berlin,1.1
+7,France,Paris,1.18
+8,Spain,Barcelona,1.05
+9,Netherlands,Amsterdam,1.15
+10,Poland,Warsaw,0.95
+11,India,Bengaluru,0.7
+12,India,Hyderabad,0.68
+13,Egypt,Cairo,0.55
+14,UAE,Dubai,1.05
+15,South Africa,Cape Town,0.7
+16,Brazil,São Paulo,0.8
+17,Mexico,Mexico City,0.78
+18,Argentina,Buenos Aires,0.65
+19,Japan,Tokyo,1.2
+20,Singapore,Singapore,1.22
+21,Australia,Sydney,1.15
