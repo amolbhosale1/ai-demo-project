@@ -1,0 +1,334 @@
+<mxfile host="Electron" version="29.6.1">
+  <diagram name="Page-1" id="diagram-1">
+    <mxGraphModel dx="1200" dy="900" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="1">
+          <mxGeometry height="83" width="1500" x="50" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="title-text" style="text;html=1;resizable=1;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=30;fontStyle=1;fontFamily=Helvetica;" value="Multi-Agent AI for Audit Firm: Analyst-Ready Briefs" vertex="1" parent="title-group">
+          <mxGeometry height="42" width="1100" as="geometry" />
+        </mxCell>
+        <mxCell id="subtitle-text" style="text;html=1;resizable=0;points=[];autosize=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=16;fontFamily=Helvetica;" value="LangGraph orchestration with MCP tool integration. Each agent owns one job and returns structured output analysts can act on." vertex="1" parent="title-group">
+          <mxGeometry height="25" width="1100" x="5" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="title-separator" style="line;strokeWidth=2;html=1;fontSize=14;strokeColor=#FF9900;fontFamily=Helvetica;" value="" vertex="1" parent="title-group">
+          <mxGeometry height="10" width="1490" x="5" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="system-boundary" style="points=[[0,0],[0.25,0],[0.5,0],[0.75,0],[1,0],[1,0.25],[1,0.5],[1,0.75],[1,1],[0.75,1],[0.5,1],[0.25,1],[0,1],[0,0.75],[0,0.5],[0,0.25]];outlineConnect=0;gradientColor=none;html=1;whiteSpace=wrap;fontSize=14;fontStyle=1;shape=mxgraph.aws4.group;grIcon=mxgraph.aws4.group_corporate_data_center;strokeColor=light-dark(#666666,#D4D4D4);fillColor=light-dark(#F5F5F5,#2A2A2A);fillStyle=auto;verticalAlign=top;align=left;spacingLeft=30;fontColor=light-dark(#333333,#E0E0E0);dashed=0;container=1;pointerEvents=0;collapsible=0;recursiveResize=0;fontFamily=Helvetica;" value="Intelligence Stack (LangGraph + MCP)" vertex="1" parent="1">
+          <mxGeometry height="780" width="1020" x="56" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="users-container" style="fillColor=#f5f5f5;strokeColor=light-dark(#666666,#D4D4D4);rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#333333;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1;perimeterSpacing=0;" value="Audit Analyst" vertex="1" parent="1">
+          <mxGeometry height="98" width="120" x="80" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="users-icon" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#232F3D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.users;fontFamily=Helvetica;" value="" vertex="1" parent="users-container">
+          <mxGeometry height="48" width="48" x="36" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-cli" style="fillColor=#FFF2E8;strokeColor=#ED7100;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#ED7100;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Entry Point" vertex="1" parent="1">
+          <mxGeometry height="130" width="130" x="260" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-cli" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#ED7100;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="briefing-agent CLI&lt;div&gt;&lt;i&gt;Typer commands&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-cli">
+          <mxGeometry height="48" width="48" x="41" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-config" style="fillColor=#E8F5E9;strokeColor=#3F8624;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#3F8624;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Configuration" vertex="1" parent="1">
+          <mxGeometry height="130" width="130" x="450" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-config" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#3F8624;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="Client YAML&lt;div&gt;&lt;i&gt;industries + MCP config&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-config">
+          <mxGeometry height="48" width="48" x="41" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-orchestrator" style="fillColor=#E0F2F1;strokeColor=#01A88D;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#01A88D;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Orchestration" vertex="1" parent="1">
+          <mxGeometry height="130" width="150" x="640" y="184" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-orchestrator" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="LangGraph&lt;div&gt;&lt;i&gt;StateGraph workflows&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-orchestrator">
+          <mxGeometry height="48" width="48" x="51" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="col-agents-label" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#01A88D;fontFamily=Helvetica;" value="&lt;b&gt;Specialized Agents (one job each)&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry height="20" width="280" x="90" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-briefing" style="fillColor=#E0F2F1;strokeColor=#01A88D;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#01A88D;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Media Monitoring" vertex="1" parent="1">
+          <mxGeometry height="130" width="150" x="90" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-briefing" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="Weekly Briefing&lt;div&gt;&lt;i&gt;collect, rank, approve&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-briefing">
+          <mxGeometry height="48" width="48" x="51" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-stakeholder" style="fillColor=#E0F2F1;strokeColor=#01A88D;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#01A88D;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Stakeholder Mapping" vertex="1" parent="1">
+          <mxGeometry height="130" width="150" x="90" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-stakeholder" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="Stakeholder Mapper&lt;div&gt;&lt;i&gt;profile, policy, score&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-stakeholder">
+          <mxGeometry height="48" width="48" x="51" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-competitor" style="fillColor=#E0F2F1;strokeColor=#01A88D;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#01A88D;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Competitor Analysis" vertex="1" parent="1">
+          <mxGeometry height="130" width="150" x="90" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-competitor" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="Competitor Alternatives&lt;div&gt;&lt;i&gt;discover, rank, gap&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-competitor">
+          <mxGeometry height="48" width="48" x="51" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="col-sources-label" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#8C4FFF;fontFamily=Helvetica;" value="&lt;b&gt;Data Sources and Tool Protocol&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry height="20" width="260" x="360" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-public" style="fillColor=#EDE7F6;strokeColor=#8C4FFF;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#8C4FFF;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Public Feeds" vertex="1" parent="1">
+          <mxGeometry height="130" width="130" x="360" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-public" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet;fontFamily=Helvetica;shadow=1;" value="RSS + APIs&lt;div&gt;&lt;i&gt;World Bank, feeds&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-public">
+          <mxGeometry height="48" width="48" x="41" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-connectors" style="fillColor=#EDE7F6;strokeColor=#8C4FFF;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#8C4FFF;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Country Connectors" vertex="1" parent="1">
+          <mxGeometry height="130" width="130" x="360" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-connectors" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#8C4FFF;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet;fontFamily=Helvetica;shadow=1;" value="UK / India / Generic&lt;div&gt;&lt;i&gt;parliamentary data&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-connectors">
+          <mxGeometry height="48" width="48" x="41" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-mcp-adapter" style="fillColor=#FCE4EC;strokeColor=#E7157B;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#E7157B;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="MCP Layer" vertex="1" parent="1">
+          <mxGeometry height="130" width="130" x="360" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-mcp-adapter" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="MCP Adapter&lt;div&gt;&lt;i&gt;langchain-mcp-adapters&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-mcp-adapter">
+          <mxGeometry height="48" width="48" x="41" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-ddg" style="fillColor=#FCE4EC;strokeColor=#E7157B;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#E7157B;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Web Search" vertex="1" parent="1">
+          <mxGeometry height="130" width="120" x="540" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-ddg" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet;fontFamily=Helvetica;shadow=1;" value="DuckDuckGo MCP&lt;div&gt;&lt;i&gt;search + fetch&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-ddg">
+          <mxGeometry height="48" width="48" x="36" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-linkedin" style="fillColor=#FCE4EC;strokeColor=#E7157B;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#E7157B;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="People Search" vertex="1" parent="1">
+          <mxGeometry height="130" width="120" x="540" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-linkedin" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#E7157B;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.internet;fontFamily=Helvetica;shadow=1;" value="LinkedIn MCP&lt;div&gt;&lt;i&gt;search_people&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-linkedin">
+          <mxGeometry height="48" width="48" x="36" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-llm" style="fillColor=#E0F2F1;strokeColor=#01A88D;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#01A88D;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="LLM Provider" vertex="1" parent="1">
+          <mxGeometry height="130" width="130" x="700" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-llm" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#01A88D;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="OpenRouter / OpenAI&lt;div&gt;&lt;i&gt;briefing synthesis&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-llm">
+          <mxGeometry height="48" width="48" x="41" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="col-outputs-label" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;fontStyle=1;fontColor=#3F8624;fontFamily=Helvetica;" value="&lt;b&gt;Structured Deliverables&lt;/b&gt;" vertex="1" parent="1">
+          <mxGeometry height="20" width="200" x="880" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-docx" style="fillColor=#E8F5E9;strokeColor=#3F8624;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#3F8624;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Briefing Output" vertex="1" parent="1">
+          <mxGeometry height="130" width="120" x="880" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-docx" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#3F8624;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value=".docx Briefing&lt;div&gt;&lt;i&gt;analyst-ready&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-docx">
+          <mxGeometry height="48" width="48" x="36" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-xlsx" style="fillColor=#E8F5E9;strokeColor=#3F8624;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#3F8624;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Stakeholder Output" vertex="1" parent="1">
+          <mxGeometry height="130" width="120" x="880" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-xlsx" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#3F8624;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value=".xlsx + Markdown&lt;div&gt;&lt;i&gt;scored stakeholders&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-xlsx">
+          <mxGeometry height="48" width="48" x="36" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-group-md" style="fillColor=#E8F5E9;strokeColor=#3F8624;rounded=1;whiteSpace=wrap;html=1;verticalAlign=top;fontStyle=1;fontSize=12;fontColor=#3F8624;fontFamily=Helvetica;container=1;collapsible=0;shadow=1;strokeWidth=1.5;" value="Competitor Output" vertex="1" parent="1">
+          <mxGeometry height="130" width="120" x="880" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="svc-md" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;fillColor=#3F8624;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=10;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.generic_application;fontFamily=Helvetica;shadow=1;" value="Markdown Report&lt;div&gt;&lt;i&gt;gaps + 30-day actions&lt;/i&gt;&lt;/div&gt;" vertex="1" parent="svc-group-md">
+          <mxGeometry height="48" width="48" x="36" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-users-cli" edge="1" parent="1" source="users-container" target="svc-group-cli" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-users-cli-label" connectable="0" parent="edge-users-cli" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="invoke command" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-cli-config" edge="1" parent="1" source="svc-group-cli" target="svc-group-config" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-cli-config-label" connectable="0" parent="edge-cli-config" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="load YAML" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-config-orchestrator" edge="1" parent="1" source="svc-group-config" target="svc-group-orchestrator" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-config-orchestrator-label" connectable="0" parent="edge-config-orchestrator" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="route workflow" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-orchestrator-briefing" edge="1" parent="1" source="svc-group-orchestrator" target="svc-group-briefing" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;exitX=0.25;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-orchestrator-stakeholder" edge="1" parent="1" source="svc-group-orchestrator" target="svc-group-stakeholder" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;exitX=0.5;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-orchestrator-competitor" edge="1" parent="1" source="svc-group-orchestrator" target="svc-group-competitor" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;exitX=0.75;exitY=1;entryX=0.5;entryY=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-briefing-public" edge="1" parent="1" source="svc-group-briefing" target="svc-group-public" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-briefing-public-label" connectable="0" parent="edge-briefing-public" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="collect sources" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-stakeholder-connectors" edge="1" parent="1" source="svc-group-stakeholder" target="svc-group-connectors" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-stakeholder-connectors-label" connectable="0" parent="edge-stakeholder-connectors" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="discover stakeholders" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-competitor-mcp" edge="1" parent="1" source="svc-group-competitor" target="svc-group-mcp-adapter" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-competitor-mcp-label" connectable="0" parent="edge-competitor-mcp" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="tool calls" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-mcp-ddg" edge="1" parent="1" source="svc-group-mcp-adapter" target="svc-group-ddg" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;exitX=1;exitY=0.25;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-mcp-linkedin" edge="1" parent="1" source="svc-group-mcp-adapter" target="svc-group-linkedin" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;exitX=1;exitY=0.75;entryX=0;entryY=0.5;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-briefing-llm" edge="1" parent="1" source="svc-group-briefing" target="svc-group-llm" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-briefing-llm-label" connectable="0" parent="edge-briefing-llm" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="summarize" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-briefing-docx" edge="1" parent="1" source="svc-group-briefing" target="svc-group-docx" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-briefing-docx-label" connectable="0" parent="edge-briefing-docx" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="write report" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-stakeholder-xlsx" edge="1" parent="1" source="svc-group-stakeholder" target="svc-group-xlsx" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-stakeholder-xlsx-label" connectable="0" parent="edge-stakeholder-xlsx" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="export workbook" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-competitor-md" edge="1" parent="1" source="svc-group-competitor" target="svc-group-md" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="edge-competitor-md-label" connectable="0" parent="edge-competitor-md" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="gap analysis report" vertex="1">
+          <mxGeometry relative="1" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-docx-users" edge="1" parent="1" source="svc-group-docx" target="users-container" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontFamily=Helvetica;dashed=1;exitX=1;exitY=0.25;entryX=1;entryY=0.75;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1040" y="423" />
+              <mxPoint x="1040" y="274" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-docx-users-label" connectable="0" parent="edge-docx-users" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=11;fontFamily=Helvetica;labelBackgroundColor=none;" value="analyst starts from synthesis" vertex="1">
+          <mxGeometry relative="1" x="0.2" y="-15" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="step-1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="1" vertex="1" parent="1">
+          <mxGeometry height="28" width="28" x="211" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="step-2" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="2" vertex="1" parent="1">
+          <mxGeometry height="28" width="28" x="401" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="step-3" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="3" vertex="1" parent="1">
+          <mxGeometry height="28" width="28" x="591" y="201" as="geometry" />
+        </mxCell>
+        <mxCell id="step-4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="4" vertex="1" parent="1">
+          <mxGeometry height="28" width="28" x="251" y="407" as="geometry" />
+        </mxCell>
+        <mxCell id="step-5" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="5" vertex="1" parent="1">
+          <mxGeometry height="28" width="28" x="501" y="747" as="geometry" />
+        </mxCell>
+        <mxCell id="step-6" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=16;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;align=center;verticalAlign=middle;labelBackgroundColor=none;" value="6" vertex="1" parent="1">
+          <mxGeometry height="28" width="28" x="1010" y="407" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-outer" connectable="0" style="group" value="" vertex="1" parent="1">
+          <mxGeometry height="880" width="650" x="1100" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-bg" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.rect;fillColor2=none;strokeWidth=1;size=20;indent=5;fillColor=light-dark(#EDF3FF,#305363);strokeColor=#6c8ebf;" value="" vertex="1" parent="legend-outer">
+          <mxGeometry height="880" width="650" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-container" connectable="0" style="group" value="" vertex="1" parent="legend-outer">
+          <mxGeometry height="850" width="602" x="20" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="step-1-legend-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="80" width="600" as="geometry" />
+        </mxCell>
+        <mxCell id="step-1-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="1" vertex="1" parent="step-1-legend-group">
+          <mxGeometry height="38" width="40" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="step-1-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;Analyst Invocation&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Analyst runs briefing-agent CLI with a client YAML profile&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Commands: run, stakeholder-map, competitor-alternatives&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-1-legend-group">
+          <mxGeometry height="80" width="548" x="52" as="geometry" />
+        </mxCell>
+        <mxCell id="step-2-legend-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="80" width="600" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="step-2-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="2" vertex="1" parent="step-2-legend-group">
+          <mxGeometry height="38" width="40" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="step-2-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;Config Load&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Client YAML merged with industry presets and MCP server config&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Provider, model, sources, and output paths resolved at runtime&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-2-legend-group">
+          <mxGeometry height="80" width="548" x="52" as="geometry" />
+        </mxCell>
+        <mxCell id="step-3-legend-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="80" width="600" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="step-3-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="3" vertex="1" parent="step-3-legend-group">
+          <mxGeometry height="38" width="40" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="step-3-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;LangGraph Orchestration&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;StateGraph routes to one of three typed agent workflows&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Each agent owns a single job with explicit node control flow&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-3-legend-group">
+          <mxGeometry height="80" width="548" x="52" as="geometry" />
+        </mxCell>
+        <mxCell id="step-4-legend-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="80" width="600" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="step-4-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="4" vertex="1" parent="step-4-legend-group">
+          <mxGeometry height="38" width="40" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="step-4-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;Agent Execution&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Briefing: collect, rank, human approval gate, summarize&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Stakeholder: profile, policy scope, connector discovery, score&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-4-legend-group">
+          <mxGeometry height="80" width="548" x="52" as="geometry" />
+        </mxCell>
+        <mxCell id="step-5-legend-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="80" width="600" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="step-5-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="5" vertex="1" parent="step-5-legend-group">
+          <mxGeometry height="38" width="40" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="step-5-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;MCP Tool Calls&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Competitor agent loads MCP tools via langchain-mcp-adapters&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;DuckDuckGo search/fetch and LinkedIn people search over stdio transport&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-5-legend-group">
+          <mxGeometry height="80" width="548" x="52" as="geometry" />
+        </mxCell>
+        <mxCell id="step-6-legend-group" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="80" width="600" y="450" as="geometry" />
+        </mxCell>
+        <mxCell id="step-6-badge-legend" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#007CBD;strokeColor=default;fontColor=#FFFFFF;fontStyle=1;fontSize=22;labelBackgroundColor=none;fontFamily=Helvetica;shadow=1;glass=0;strokeWidth=2;" value="6" vertex="1" parent="step-6-legend-group">
+          <mxGeometry height="38" width="40" y="2" as="geometry" />
+        </mxCell>
+        <mxCell id="step-6-desc-legend" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;Structured Deliverables&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Outputs: .docx briefings, .xlsx stakeholder maps, markdown gap reports&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;-&lt;/font&gt; &lt;/b&gt;Analysts begin from synthesis, not a blank page&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="step-6-legend-group">
+          <mxGeometry height="80" width="548" x="52" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-agents-note" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=13;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;span style=&quot;color: light-dark(rgb(0,0,0), rgb(255,255,255));&quot;&gt;&lt;i&gt;Competitor agent: parallel discovery (local / similar / adjacent), rank, bucket, gap analysis, 30-day priority actions.&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;" vertex="1" parent="legend-container">
+          <mxGeometry height="50" width="560" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-styles-outer" connectable="0" style="group;fontFamily=Helvetica;" value="" vertex="1" parent="legend-container">
+          <mxGeometry height="133" width="600" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-styles-group" style="group;fontFamily=Helvetica;fillColor=light-dark(#F5F5F5,#29393B);strokeColor=#666666;rounded=1;" value="" vertex="1" parent="legend-line-styles-outer">
+          <mxGeometry height="133" width="456" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-title" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=14;fontStyle=1;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="Line Styles" vertex="1" parent="legend-line-styles-group">
+          <mxGeometry height="26" width="152" x="4" y="4" as="geometry" />
+        </mxCell>
+        <mxCell id="legend-line-desc" style="text;html=1;align=left;verticalAlign=top;spacingTop=-4;fontSize=13;labelBackgroundColor=none;whiteSpace=wrap;fontFamily=Helvetica;" value="&lt;div&gt;&lt;b&gt;---- Solid&lt;/b&gt;: Primary data and control flow&lt;/div&gt;&lt;div&gt;&lt;b&gt;- - - Dashed&lt;/b&gt;: Deliverable returned to analyst&lt;/div&gt;" vertex="1" parent="legend-line-styles-group">
+          <mxGeometry height="80" width="440" x="8" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
